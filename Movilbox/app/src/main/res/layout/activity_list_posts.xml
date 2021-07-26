@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contentGlobal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_fondo">
+
+    <View
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@drawable/fondo_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="Lista de posts"
+        android:textColor="@color/blanco"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/contentFiltro"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/fondo_refresh"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textFiltro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FI"
+            android:textColor="@color/blanco"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/contentPosts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contentView"
+        app:layout_constraintBottom_toTopOf="@+id/contentFooter">
+
+        <LinearLayout
+            android:id="@+id/contentScrollOptions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingBottom="100dp">
+
+            <LinearLayout
+                android:id="@+id/contentBodyPosts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/textInformacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="3sp"
+                    android:padding="20dp"
+                    android:text="Actualmente no hay posts. Revisa nuevamente mas tarde "
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="9sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contentPogressPosts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="13dp"
+                android:background="@drawable/fondo_cargador"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/textPogressPosts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="Buscando nuevos posts"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/contentFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <Button
+            android:id="@+id/buttonRefresh"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:background="@drawable/button_in_baground_verde"
+            android:text="Refrescar"
+            android:textAllCaps="false"
+            android:textColor="@color/blanco"
+            android:textSize="11sp"/>
+
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:background="@drawable/button_in_baground_rojo"
+            android:text="Eliminar"
+            android:textAllCaps="false"
+            android:textColor="@color/blanco"
+            android:textSize="11sp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

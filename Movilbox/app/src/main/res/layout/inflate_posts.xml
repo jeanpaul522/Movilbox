@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/fondo_blanco"
+        android:orientation="vertical"
+        android:paddingStart="25dp"
+        android:paddingTop="25dp"
+        android:paddingEnd="25dp"
+        android:paddingBottom="30dp">
+
+        <View
+            android:layout_width="70dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/separator" />
+
+        <TextView
+            android:id="@+id/textCardTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center"
+            android:text="Pago de deuda"
+            android:textColor="@color/grisOscuro"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textCardMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="3dp"
+            android:gravity="center"
+            android:lineSpacingExtra="3sp"
+            android:text="Recuerda que tienes una deuda pendiente con litttio. Puedes hacer el pago en cualquiera de nuestros puntos o en linea"
+            android:textColor="@color/grisMedio"
+            android:textSize="9sp" />
+
+
+        <LinearLayout
+            android:id="@+id/contentBodyPosts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/contentFavorite"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/fondo_option_favorite"
+                android:orientation="horizontal"/>
+
+            <LinearLayout
+                android:id="@+id/contentDelete"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/fondo_option_delete"
+                android:orientation="horizontal"/>
+
+            <LinearLayout
+                android:id="@+id/contentLeido"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/fondo_option_leido"
+                android:orientation="horizontal" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

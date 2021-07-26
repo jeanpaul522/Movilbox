@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contentGlobal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_fondo">
+
+    <View
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@drawable/fondo_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="Detalle del usuario"
+        android:textColor="@color/blanco"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/contentInfoUser"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contentView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="50dp">
+
+            <LinearLayout
+                android:id="@+id/contentBodyInfoUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/contentCardUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/fondo_blanco"
+                    android:orientation="vertical"
+                    android:paddingStart="25dp"
+                    android:paddingTop="25dp"
+                    android:paddingEnd="25dp"
+                    android:paddingBottom="30dp">
+
+                    <View
+                        android:layout_width="70dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/separator" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textCardName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:text="Nombre"
+                            android:textColor="@color/grisOscuro"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/textCardValorName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:text="Ninguno"
+                            android:textColor="@color/grisMedio"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textCardUsername"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:text="Usuario"
+                            android:textColor="@color/grisOscuro"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/textCardValorUsername"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:text="Ninguno"
+                            android:textColor="@color/grisMedio"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textCardEmail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:text="Email"
+                            android:textColor="@color/grisOscuro"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/textCardValorEmail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:text="Ninguno"
+                            android:textColor="@color/grisMedio"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textCardPhone"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:text="Telefono"
+                            android:textColor="@color/grisOscuro"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/textCardValorPhone"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:text="Ninguno"
+                            android:textColor="@color/grisMedio"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textCardWebsite"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:text="Pagina web"
+                            android:textColor="@color/grisOscuro"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/textCardValorWebsite"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:text="Ninguno"
+                            android:textColor="@color/grisMedio"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/contentFechaPago"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textCardFechaPago"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:text="Fecha de pago"
+                            android:textColor="@color/grisOscuro"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/textCardValorFechaPago"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:text="10/20/2020"
+                            android:textColor="@color/grisMedio"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contentPogressInfoUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="13dp"
+                android:background="@drawable/fondo_cargador"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/textPogressInfoUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="Buscando información del usuario"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
